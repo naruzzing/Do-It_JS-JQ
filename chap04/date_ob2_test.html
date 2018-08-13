@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var today = new Date();
+        var nowYear = today.getFullYear();
+        var endDay = new Date(nowYear,11,31);
+        var remainMS = endDay.getTime()-today.getTime(); // 남은 기간 밀리초
+
+        var result = Math.ceil(remainMS/(1000*60*60*24));
+
+        document.write("D-Day : " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

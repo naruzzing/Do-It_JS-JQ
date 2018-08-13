@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var isInter1 = false;
+        var isInter2 = false;
+
+        var addNum = 0;
+        var subNum = 1000;
+        var auto_1 = null;
+        var auto_2 = null;
+
+        function interval1(){
+            if(isInter1==false){
+                isInter1=true;
+                auto_1 = setInterval(function(){
+                    addNum++;
+                    console.log("+Num: " + addNum);
+                }, 100);
+            }else{
+                clearInterval(auto_1);
+                isInter1=false;
+            }
+        }
+
+        function interval2(){
+            if(isInter2==false){
+                isInter2=true;
+                auto_2 = setInterval(function(){
+                    subNum--;
+                    console.log("-Num: " + subNum);
+                }, 100);
+            }else{
+                clearInterval(auto_2);
+                isInter2=false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="interval1()">증가값 시작/정지</button>
+    <button onclick="interval2()">감소값 시작/정지</button>
+</body>
+</html>
